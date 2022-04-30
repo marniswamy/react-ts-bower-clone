@@ -1,0 +1,74 @@
+.MuiAppBar-root {
+  background-color: #ffcc2f !important;
+  min-height: 180px;
+  padding: 1rem 0 !important;
+  box-shadow: none !important;
+}
+
+.image-wrapper {
+  overflow: hidden;
+}
+
+.logo {
+  width: 140px;
+  height: 123px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  margin: 0;
+  padding: 0;
+  color: #543729;
+}
+
+sub {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #543729;
+}
+
+sub a {
+  text-decoration: none;
+  color: #008ec4;
+  position: absolute;
+}
+
+ul {
+  display: flex;
+  position: relative;
+  top: -3rem;
+}
+
+li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+li a {
+  color: #2baf2b;
+  display: block;
+  padding: 0.2em 15px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: none;
+  background: white;
+}
+
+li a:active,
+li a:hover {
+  outline: 0;
+}
+
+li a:active {
+  color: #008ec4;
+}
