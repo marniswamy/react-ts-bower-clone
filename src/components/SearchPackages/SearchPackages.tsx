@@ -1,26 +1,45 @@
 import "./SearchPackages.scss";
 import React, { FC, useState, useEffect } from "react";
 import axios from "axios";
-import Grid from "@mui/material/Grid";
+import { PackagesList } from "../PackagesList/PackagesList";
+import { Pagination } from "../Pagination/Pagination";
 
 export const SearchPackages: FC = () => {
-  const [data, setData] = useState([]);
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [packagesPerPage] = useState(5);
 
   useEffect(() => {
     const getBowerPackages = async () => {
+      setLoading(true);
       try {
         const result = await axios(
           `https://libraries.io/api/bower-search?q=${query}`
         );
-        setData(result.data);
+        setPackages(result.data);
+        setLoading(false);
       } catch (error) {
         console.log("Something went wrong ", error);
+        setLoading(false);
       }
     };
 
     getBowerPackages();
   }, [query]);
+
+  // Get current packages
+  const indexOfLastPackage = currentPage * packagesPerPage;
+  const indexOfFirstPackage = indexOfLastPackage - packagesPerPage;
+  const currrentPackages = packages.slice(
+    indexOfFirstPackage,
+    indexOfLastPackage
+  );
+
+  // Change page
+  const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
 
   return (
     <div className="search-section">
@@ -30,35 +49,13 @@ export const SearchPackages: FC = () => {
         value={query}
         onChange={(event) => setQuery(event.target.value)}
       />
-      <div>
-        <Grid container className="table-header">
-          <Grid item xs={8}>
-            <h4>Name</h4>
-          </Grid>
-          <Grid item xs={2}>
-            <h4>Owner</h4>
-          </Grid>
-          <Grid item xs={2}>
-            <h4>Stars</h4>
-          </Grid>
-        </Grid>
-      </div>
-      <Grid container>
-        {data &&
-          data.map((item: any, index) => (
-            <React.Fragment key={index}>
-              <Grid item xs={8}>
-                <h4>{item.name}</h4>
-              </Grid>
-              <Grid item xs={2}>
-                <h4>{item.dependent_repos_count}</h4>
-              </Grid>
-              <Grid item xs={2}>
-                <h4>{item.stars}</h4>
-              </Grid>
-            </React.Fragment>
-          ))}
-      </Grid>
+      <PackagesList packagesList={currrentPackages} loading={loading} />
+      <Pagination
+        postsPerPage={packagesPerPage}
+        totalPosts={packages.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
