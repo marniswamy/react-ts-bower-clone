@@ -11,7 +11,7 @@ export const HomePage: FC = () => {
           <SideBar />
         </Grid>
         <Grid item xs={10}>
-          <h2>Search Section</h2>
+          <h2>Home Section</h2>
         </Grid>
       </Grid>
     </Container>

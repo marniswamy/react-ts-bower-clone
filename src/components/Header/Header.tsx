@@ -1,13 +1,12 @@
-import "./Header.css";
+import "./Header.scss";
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
 export const Header: FC = () => {
   return (
-    <AppBar position="static">
+    <header>
       <Container maxWidth="lg">
         <Grid container spacing={2} justifyContent="center" alignItems="center">
           <Grid item xs={2}>
@@ -44,6 +43,6 @@ export const Header: FC = () => {
           </Grid>
         </Grid>
       </Container>
-    </AppBar>
+    </header>
   );
 };

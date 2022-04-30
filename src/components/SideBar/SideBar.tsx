@@ -1,4 +1,4 @@
-import "./SideBar.css";
+import "./SideBar.scss";
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 

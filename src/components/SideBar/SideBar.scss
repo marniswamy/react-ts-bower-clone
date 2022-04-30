@@ -1,0 +1,19 @@
+.side-bar {
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      font-size: 17px;
+      font-weight: bold;
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 0.2em 0;
+        color: #00acee;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
