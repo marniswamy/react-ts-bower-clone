@@ -2,7 +2,6 @@ header {
   background: #ffcc2f;
   color: #543729;
   padding: 10px 0;
-  min-height: 180px;
   margin-bottom: 20px;
 
   .container {
@@ -74,6 +73,43 @@ header {
       a {
         text-decoration: none;
         color: #008ec4;
+      }
+    }
+    @media screen and (max-width: 680px) {
+      .nav {
+        text-align: center;
+        display: table-cell;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #f1c03e;
+        position: absolute;
+        width: 100%;
+      }
+      .logo {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        left: auto;
+        top: 5px;
+      }
+      .page-title {
+        font-size: 32px;
+        padding: 0.5rem 1rem;
+        display: inline-block;
+      }
+
+      li {
+        float: none;
+        text-align: center;
+        display: table-cell;
+        margin-bottom: 10px;
+      }
+
+      .title-section {
+        padding-top: 3rem;
+      }
+
+      sub {
+        display: none;
       }
     }
   }

@@ -23,18 +23,20 @@ export const Header: FC = () => {
               <Link to="/">Stats</Link>
             </li>
           </ul>
-          <a href="/">
-            <img
-              className="logo"
-              src="https://bower.io/img/bower-logo.svg"
-              alt="Bower logo"
-            />
-          </a>
-          <h1 className="page-title">Bower Search</h1>
-          <sub>
-            Powered by
-            <Link to="https://libraries.io/">&nbsp;Libraries.io</Link>
-          </sub>
+          <div className="title-section">
+            <a href="/">
+              <img
+                className="logo"
+                src="https://bower.io/img/bower-logo.svg"
+                alt="Bower logo"
+              />
+            </a>
+            <h1 className="page-title">Bower Search</h1>
+            <sub>
+              Powered by
+              <Link to="https://libraries.io/">&nbsp;Libraries.io</Link>
+            </sub>
+          </div>
         </div>
       </Container>
     </header>
