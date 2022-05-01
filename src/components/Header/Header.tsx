@@ -25,22 +25,7 @@ export const Header: FC = () => {
               <Link to="https://libraries.io/">&nbsp;Libraries.io</Link>
             </sub>
           </Grid>
-          <Grid item xs={6}>
-            <ul>
-              <li>
-                <Link to="/">Docs</Link>
-              </li>
-              <li>
-                <Link to="/search">Search Packages</Link>
-              </li>
-              <li>
-                <Link to="/">Blogs</Link>
-              </li>
-              <li>
-                <Link to="/">Stats</Link>
-              </li>
-            </ul>
-          </Grid>
+          <Grid item xs={6}></Grid>
         </Grid>
       </Container>
     </header>
