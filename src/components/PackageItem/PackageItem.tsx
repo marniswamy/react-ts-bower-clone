@@ -1,7 +1,7 @@
 import "./PackageItem.scss";
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
+import Box from "@mui/material/Box";
+import { getOwnerNameHelper } from "../../helpers/getOwnerNameHelper";
 
 export const PackageItem = ({ item }: any) => {
   return (
@@ -14,6 +14,15 @@ export const PackageItem = ({ item }: any) => {
         <a href={item.homepage}>{item.homepage}</a>
       </small>
       <p>{item.description}</p>
+      <Box
+        mt={1}
+        sx={{
+          display: { xs: "block", sm: "none", md: "none", lg: "none" },
+        }}
+      >
+        <span>Owner: {getOwnerNameHelper(item.repository_url)}</span>{" "}
+        <span>Stars: {item.stars}</span>
+      </Box>
     </div>
   );
 };

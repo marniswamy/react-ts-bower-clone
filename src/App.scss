@@ -2,3 +2,8 @@ body {
   font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
+
+.search-container,
+.home-container {
+  display: flex !important;
+}
