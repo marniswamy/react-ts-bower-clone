@@ -3,8 +3,23 @@ import React, { FC, useState } from "react";
 import Grid from "@mui/material/Grid";
 import { PackageItem } from "../PackageItem/PackageItem";
 import { getOwnerNameHelper } from "../../helpers/getOwnerNameHelper";
+import { Pagination } from "../Pagination/Pagination";
 
 export const PackagesList = ({ packagesList, loading }: any) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [packagesPerPage] = useState(5);
+
+  // Get current packages
+  const indexOfLastPackage = currentPage * packagesPerPage;
+  const indexOfFirstPackage = indexOfLastPackage - packagesPerPage;
+  const currrentPackages = packagesList.slice(
+    indexOfFirstPackage,
+    indexOfLastPackage
+  );
+
+  // Change page
+  const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
+
   if (loading) {
     return <h2>Fetching Packages...</h2>;
   }
@@ -39,7 +54,7 @@ export const PackagesList = ({ packagesList, loading }: any) => {
         </Grid>
       </Grid>
       <Grid container>
-        {packagesList.map((item: any, index: any) => (
+        {currrentPackages.map((item: any, index: any) => (
           <React.Fragment key={index}>
             <Grid item xs={12} sm={8} md={8} lg={8}>
               <PackageItem item={item} />
@@ -65,6 +80,13 @@ export const PackagesList = ({ packagesList, loading }: any) => {
           </React.Fragment>
         ))}
       </Grid>
+
+      <Pagination
+        postsPerPage={packagesPerPage}
+        totalPosts={packagesList.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </div>
   );
 };
