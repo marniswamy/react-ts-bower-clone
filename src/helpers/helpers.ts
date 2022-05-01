@@ -24,3 +24,7 @@ export const sortDataBySortType = (data = [], sortType: string) => {
 
   return data;
 };
+
+export const getOwnerNameHelper = (repoUrl: string) => {
+  return repoUrl.split("/")[3];
+};

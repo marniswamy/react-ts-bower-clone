@@ -1,7 +1,7 @@
 import "./PackageItem.scss";
 import HomeIcon from "@mui/icons-material/Home";
 import Box from "@mui/material/Box";
-import { getOwnerNameHelper } from "../../helpers/getOwnerNameHelper";
+import { getOwnerNameHelper } from "../../helpers/helpers";
 
 export const PackageItem = ({ item }: any) => {
   return (

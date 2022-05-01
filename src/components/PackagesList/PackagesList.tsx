@@ -2,7 +2,7 @@ import "./PackagesList.scss";
 import React, { FC, useState } from "react";
 import Grid from "@mui/material/Grid";
 import { PackageItem } from "../PackageItem/PackageItem";
-import { getOwnerNameHelper } from "../../helpers/getOwnerNameHelper";
+import { getOwnerNameHelper } from "../../helpers/helpers";
 import { Pagination } from "../Pagination/Pagination";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 
