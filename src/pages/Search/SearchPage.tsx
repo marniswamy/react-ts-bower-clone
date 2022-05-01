@@ -6,17 +6,17 @@ import { SearchPackages } from "../../components/SearchPackages/SearchPackages";
 
 export const SearchPage: FC = () => {
   return (
-    <Container maxWidth="lg" className="home-container">
+    <Container maxWidth="lg" className="search-container">
       <Box
         sx={{
-          display: { xs: "none", md: "block", width: "15vw" },
+          display: { xs: "none", sm: "none", md: "block", width: "15vw" },
         }}
       >
         <SideBar />
       </Box>
       <Box
         sx={{
-          display: { xs: "block", md: "block", width: "75vw" },
+          display: { xs: "block", sm: "block", md: "block", width: "75vw" },
         }}
       >
         <SearchPackages />

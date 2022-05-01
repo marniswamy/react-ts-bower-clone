@@ -51,7 +51,7 @@ export const PackagesList = ({ packagesList, loading }: any) => {
                 display: { xs: "none", sm: "block", md: "block", lg: "block" },
               }}
             >
-              <h4>{getOwnerNameHelper(item.repository_url)}</h4>
+              <p>{getOwnerNameHelper(item.repository_url)}</p>
             </Grid>
             <Grid
               item
@@ -60,7 +60,7 @@ export const PackagesList = ({ packagesList, loading }: any) => {
                 display: { xs: "none", sm: "block", md: "block", lg: "block" },
               }}
             >
-              <h4>{item.stars}</h4>
+              <p>{item.stars}</p>
             </Grid>
           </React.Fragment>
         ))}
