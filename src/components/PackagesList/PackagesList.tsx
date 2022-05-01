@@ -4,8 +4,13 @@ import Grid from "@mui/material/Grid";
 import { PackageItem } from "../PackageItem/PackageItem";
 import { getOwnerNameHelper } from "../../helpers/getOwnerNameHelper";
 import { Pagination } from "../Pagination/Pagination";
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 
-export const PackagesList = ({ packagesList, loading }: any) => {
+export const PackagesList = ({
+  packagesList,
+  loading,
+  sortByStartsHandler,
+}: any) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [packagesPerPage] = useState(5);
 
@@ -17,7 +22,6 @@ export const PackagesList = ({ packagesList, loading }: any) => {
     indexOfLastPackage
   );
 
-  // Change page
   const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
 
   if (loading) {
@@ -50,7 +54,9 @@ export const PackagesList = ({ packagesList, loading }: any) => {
             display: { xs: "none", sm: "block", md: "block", lg: "block" },
           }}
         >
-          <h4>Stars</h4>
+          <h4 className="stars" onClick={() => sortByStartsHandler()}>
+            Stars <CompareArrowsIcon fontSize="small" />
+          </h4>
         </Grid>
       </Grid>
       <Grid container>

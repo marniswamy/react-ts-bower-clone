@@ -6,6 +6,17 @@
       color: #008ec4;
       border-bottom: 1px solid #eee;
       padding: 5px 0 15px 0;
+
+      svg {
+        position: relative;
+        top: 4px;
+        left: 4px;
+        transform: rotate(90deg);
+      }
     }
+  }
+
+  .stars {
+    cursor: pointer;
   }
 }
