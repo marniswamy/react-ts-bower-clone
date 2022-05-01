@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { SideBar } from "../../components/SideBar/SideBar";
 import { SearchPackages } from "../../components/SearchPackages/SearchPackages";

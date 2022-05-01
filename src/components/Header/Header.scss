@@ -3,57 +3,77 @@ header {
   color: #543729;
   padding: 10px 0;
   min-height: 180px;
+  margin-bottom: 20px;
 
-  .image-wrapper {
-    overflow: hidden;
+  .container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    .nav {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      font-weight: bold;
+      font-size: 16px;
+      list-style-type: none;
+      margin: 0;
+
+      .docs a {
+        color: #00acee;
+      }
+
+      li {
+        float: left;
+
+        a {
+          color: #2baf2b;
+          display: block;
+          padding: 0.2em 15px;
+          border-radius: 4px;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+            background: white;
+            outline: 0;
+          }
+        }
+      }
+    }
+
     .logo {
+      display: block;
       width: 140px;
-      height: 123px;
+      position: absolute;
+      left: 30px;
+      top: 15px;
       transition: 0.3s;
       &:hover {
         transform: scale(1.1);
       }
     }
-  }
 
-  .title {
-    font-size: 60px;
-    font-weight: bold;
-    letter-spacing: -0.025em;
-    margin: 0;
-    padding: 0;
-    color: #543729;
-  }
-
-  sub {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #543729;
-    a {
-      text-decoration: none;
-      color: #008ec4;
-    }
-  }
-
-  ul {
-    display: flex;
-    position: relative;
-    top: -3rem;
-    li {
-      list-style: none;
+    .page-title {
+      font-size: 64px;
       font-weight: bold;
-      font-size: 16px;
+      letter-spacing: -0.025em;
+      margin: 0;
+      padding: 0;
+      padding-top: 2rem;
+      padding-left: 12rem;
+    }
+
+    sub {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #543729;
+      padding-left: 12rem;
+      position: relative;
+      bottom: 1rem;
       a {
-        color: #2baf2b;
-        display: block;
-        padding: 0.2em 15px;
-        border-radius: 4px;
         text-decoration: none;
-        &:hover {
-          text-decoration: none;
-          background: white;
-          outline: 0;
-        }
+        color: #008ec4;
       }
     }
   }
