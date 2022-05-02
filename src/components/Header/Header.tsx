@@ -1,26 +1,24 @@
 import "./Header.scss";
 import React, { FC } from "react";
-import { Link } from "react-router-dom";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 
 export const Header: FC = () => {
   return (
-    <header>
+    <header role="page-header">
       <Container maxWidth="lg" disableGutters={true}>
         <div className="container">
           <ul className="nav">
             <li className="docs">
-              <Link to="/">Docs</Link>
+              <a href="/">Docs</a>
             </li>
             <li>
-              <Link to="/search">Search Packages</Link>
+              <a href="/search">Search Packages</a>
             </li>
             <li>
-              <Link to="/">Blogs</Link>
+              <a href="/">Blogs</a>
             </li>
             <li>
-              <Link to="/">Stats</Link>
+              <a href="/">Stats</a>
             </li>
           </ul>
           <div className="title-section">
@@ -34,7 +32,7 @@ export const Header: FC = () => {
             <h1 className="page-title">Bower Search</h1>
             <sub>
               Powered by
-              <Link to="https://libraries.io/">&nbsp;Libraries.io</Link>
+              <a href="https://libraries.io/">&nbsp;Libraries.io</a>
             </sub>
           </div>
         </div>

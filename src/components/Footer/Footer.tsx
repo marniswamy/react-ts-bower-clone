@@ -1,5 +1,5 @@
 import React, { FC } from "react";
 
 export const Footer: FC = () => {
-  return <h2>Footer</h2>;
+  return <footer role="footer">Footer</footer>;
 };

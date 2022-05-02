@@ -2,8 +2,14 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { App } from "./App";
 
-test("renders learn react link", () => {
+test("renders Search Packages text", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/Search Packages/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+test("Should have the header role", () => {
+  render(<App />);
+  const linkElement = screen.getByRole(/page-header/i);
   expect(linkElement).toBeInTheDocument();
 });
