@@ -1,11 +1,11 @@
 import "./App.scss";
-import React, { FC } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { HomePage } from "./pages/Home/HomePage";
 import { SearchPage } from "./pages/Search/SearchPage";
 
-export const App: FC = () => {
+export const App: React.FC = () => {
   return (
     <Router>
       <Header />

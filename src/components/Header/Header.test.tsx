@@ -2,12 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Header } from "./Header";
 
-test("renders Bower Search in header", () => {
-  render(<Header />);
-  const linkElement = screen.getByText(/Bower Search/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
 test("renders the link with Docs", () => {
   render(<Header />);
   const linkElement = screen.getByText(/Docs/i);

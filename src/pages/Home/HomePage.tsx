@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { SideBar } from "../../components/SideBar/SideBar";

@@ -18,7 +18,7 @@ export const Pagination = ({
   }
 
   return (
-    <div className="pagination">
+    <div data-testid="pagination" className="pagination">
       <ul>
         {pageNumbers.map((number) => (
           <li

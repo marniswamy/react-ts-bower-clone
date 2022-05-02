@@ -1,6 +1,7 @@
 import "./Header.scss";
 import React, { FC } from "react";
 import Container from "@mui/material/Container";
+import { getPageTitle } from "../../helpers/helpers";
 
 export const Header: FC = () => {
   return (
@@ -29,7 +30,7 @@ export const Header: FC = () => {
                 alt="Bower logo"
               />
             </a>
-            <h1 className="page-title">Bower Search</h1>
+            <h1 className="page-title">{getPageTitle()}</h1>
             <sub>
               Powered by
               <a href="https://libraries.io/">&nbsp;Libraries.io</a>

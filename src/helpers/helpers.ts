@@ -28,3 +28,9 @@ export const sortDataBySortType = (data = [], sortType: string) => {
 export const getOwnerNameHelper = (repoUrl: string) => {
   return repoUrl.split("/")[3];
 };
+
+export const getPageTitle = () => {
+  const { pathname } = window.location;
+  const onSearchPage = pathname.includes("/search");
+  return onSearchPage ? "Bower Search" : "Bower Packages";
+};
