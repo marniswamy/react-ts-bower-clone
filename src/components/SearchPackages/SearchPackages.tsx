@@ -38,7 +38,7 @@ export const SearchPackages: FC = () => {
   };
 
   return (
-    <div className="search-section">
+    <div role="search-packages" className="search-section">
       <input
         type="search"
         placeholder="Search..."

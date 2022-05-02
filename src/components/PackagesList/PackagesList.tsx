@@ -7,7 +7,7 @@ import { Pagination } from "../Pagination/Pagination";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 
 export const PackagesList = ({
-  packagesList,
+  packagesList = [],
   loading,
   sortByStartsHandler,
 }: any) => {

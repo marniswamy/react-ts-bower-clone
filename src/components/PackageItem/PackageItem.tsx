@@ -6,7 +6,7 @@ import { getOwnerNameHelper } from "../../helpers/helpers";
 export const PackageItem = ({ item }: any) => {
   return (
     <div className="package-item">
-      <h4>
+      <h4 data-testid="repo-name">
         <a href={item.repository_url}>{item.name}</a>
       </h4>
       <small>

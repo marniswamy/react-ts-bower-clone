@@ -2,8 +2,8 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { SearchPackages } from "./SearchPackages";
 
-test("renders learn react link", () => {
+test("renders search page with role search-packages", () => {
   render(<SearchPackages />);
-  const linkElement = screen.getByText(/SideBar/);
+  const linkElement = screen.getByRole("search-packages");
   expect(linkElement).toBeInTheDocument();
 });
