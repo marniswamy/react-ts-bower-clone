@@ -10,6 +10,6 @@ test("renders Search Packages text", () => {
 
 test("Should have the header role", () => {
   render(<App />);
-  const linkElement = screen.getByRole(/page-header/i);
+  const linkElement = screen.getByTestId(/page-header/i);
   expect(linkElement).toBeInTheDocument();
 });

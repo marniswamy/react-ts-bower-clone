@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 
 export const Header: FC = () => {
   return (
-    <header role="page-header">
+    <header data-testid="page-header">
       <Container maxWidth="lg" disableGutters={true}>
         <div className="container">
           <ul className="nav">

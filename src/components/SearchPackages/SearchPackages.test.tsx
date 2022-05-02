@@ -4,6 +4,6 @@ import { SearchPackages } from "./SearchPackages";
 
 test("renders search page with role search-packages", () => {
   render(<SearchPackages />);
-  const linkElement = screen.getByRole("search-packages");
+  const linkElement = screen.getByTestId("search-packages");
   expect(linkElement).toBeInTheDocument();
 });
